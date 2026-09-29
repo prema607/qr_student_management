@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block title %}
+CampusID | Home
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row align-items-center">
+
+        <div class="col-lg-6">
+
+            <h1 class="display-4 fw-bold">
+                CampusID
+            </h1>
+
+            <h4 class="text-primary mb-3">
+                Digital Identity & QR Verification Portal
+            </h4>
+
+            <p class="lead">
+                Secure student identity management with QR code verification,
+                digital student IDs, scan history, and administrative controls.
+            </p>
+
+            <div class="mt-4">
+
+                <a href="{{ url_for('auth.login') }}"
+                   class="btn btn-primary btn-lg me-3">
+
+                    <i class="bi bi-shield-lock"></i>
+
+                    Admin Login
+
+                </a>
+
+                <a href="#features"
+                   class="btn btn-outline-primary btn-lg">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 text-center">
+
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+                class="img-fluid"
+                width="350">
+
+        </div>
+
+    </div>
+
+</div>
+
+<hr>
+
+<section id="features" class="container py-5">
+
+    <h2 class="text-center mb-5">
+        Features
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="card p-4 shadow-sm">
+
+                <h4>
+                    <i class="bi bi-person-vcard"></i>
+
+                    Student Profiles
+                </h4>
+
+                <p>
+                    Store complete student information securely.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-4 shadow-sm">
+
+                <h4>
+                    <i class="bi bi-qr-code"></i>
+
+                    QR Verification
+                </h4>
+
+                <p>
+                    Verify students instantly using secure QR codes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card p-4 shadow-sm">
+
+                <h4>
+                    <i class="bi bi-clock-history"></i>
+
+                    Scan History
+                </h4>
+
+                <p>
+                    Keep track of every verification performed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,178 @@
+/* ================================
+   CampusConnect Global Theme
+================================ */
+
+:root {
+
+    --primary: #1E3A8A;
+    --secondary: #2563EB;
+    --sidebar: #0F172A;
+
+    --background: #F8FAFC;
+    --card: #FFFFFF;
+
+    --text: #1F2937;
+    --muted: #64748B;
+
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+}
+
+
+/* Global */
+
+* {
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+body {
+
+    background:var(--background);
+    color:var(--text);
+
+}
+
+
+a {
+
+    text-decoration:none;
+
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+    font-weight:600;
+
+}
+
+
+/* Cards */
+
+.card {
+
+    border:none;
+    border-radius:18px;
+    background:var(--card);
+    box-shadow:0 8px 25px rgba(15,23,42,0.08);
+    transition:0.3s ease;
+
+}
+
+
+.card:hover {
+
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(15,23,42,0.12);
+
+}
+
+
+
+/* Buttons */
+
+.btn {
+
+    border-radius:12px;
+    padding:10px 20px;
+    font-weight:500;
+
+}
+
+
+.btn-primary {
+
+    background:var(--secondary);
+    border:none;
+
+}
+
+
+.btn-primary:hover {
+
+    background:var(--primary);
+
+}
+
+
+
+/* Forms */
+
+input,
+select,
+textarea {
+
+    border-radius:12px !important;
+    border:1px solid #E2E8F0 !important;
+    padding:12px !important;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color:var(--secondary) !important;
+    box-shadow:0 0 0 0.2rem rgba(37,99,235,.15) !important;
+
+}
+
+
+
+/* Tables */
+
+table {
+
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+
+}
+
+
+.table thead {
+
+    background:var(--sidebar);
+    color:white;
+
+}
+
+
+.table tbody tr:hover {
+
+    background:#F1F5F9;
+
+}
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+
+    width:8px;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:#CBD5E1;
+    border-radius:10px;
+
+}

@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ student.name }} | CampusConnect
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header bg-primary text-white text-center py-4">
+
+                    <h3 class="mb-1">
+                        <i class="bi bi-person-badge-fill"></i>
+                        CampusConnect Digital ID
+                    </h3>
+
+                    <small>
+                        Student Identity Card
+                    </small>
+
+                </div>
+
+                <div class="card-body p-5">
+
+                    <div class="row">
+
+                        <!-- Left -->
+
+                        <div class="col-md-4 text-center">
+
+                            <img
+                                src="{{ url_for('static', filename='photos/' + student.photo) }}"
+                                class="rounded-circle shadow mb-3"
+                                style="width:180px;height:180px;object-fit:cover;">
+
+                            {% if student.status == "Active" %}
+
+                                <span class="badge bg-success fs-6">
+                                    Active
+                                </span>
+
+                            {% else %}
+
+                                <span class="badge bg-danger fs-6">
+                                    Inactive
+                                </span>
+
+                            {% endif %}
+
+                        </div>
+
+                        <!-- Right -->
+
+                        <div class="col-md-8">
+
+                            <h2 class="fw-bold mb-4">
+
+                                {{ student.name }}
+
+                            </h2>
+
+                            <table class="table table-borderless">
+
+                                <tr>
+
+                                    <th width="35%">
+                                        Roll Number
+                                    </th>
+
+                                    <td>
+                                        {{ student.rollno }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Department
+                                    </th>
+
+                                    <td>
+                                        {{ student.department }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Year
+                                    </th>
+
+                                    <td>
+                                        {{ student.year }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Section
+                                    </th>
+
+                                    <td>
+                                        {{ student.section }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Blood Group
+                                    </th>
+
+                                    <td>
+                                        {{ student.blood_group }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Email
+                                    </th>
+
+                                    <td>
+                                        {{ student.email }}
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <th>
+                                        Phone
+                                    </th>
+
+                                    <td>
+                                        {{ student.phone }}
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="text-center">
+
+                        <a
+                            href="{{ url_for('static', filename='qr_codes/' + student.qr_code) }}"
+                            target="_blank"
+                            class="btn btn-dark">
+
+                            <i class="bi bi-qr-code"></i>
+
+                            View QR Code
+
+                        </a>
+
+                        <button
+                            onclick="window.print()"
+                            class="btn btn-primary ms-2">
+
+                            <i class="bi bi-printer-fill"></i>
+
+                            Print ID
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer text-center text-muted">
+
+                    CampusConnect © 2026
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

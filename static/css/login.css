@@ -1,0 +1,74 @@
+.login-page{
+
+    background:linear-gradient(135deg,#2563EB,#1E40AF);
+
+}
+
+.login-left{
+
+    color:white;
+    padding:60px;
+
+}
+
+.login-card{
+
+    background:white;
+
+    max-width:450px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.login-card h2{
+
+    font-weight:700;
+
+}
+
+.input-group-text{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+}
+
+.form-control{
+
+    height:50px;
+
+}
+
+.btn-primary{
+
+    height:50px;
+
+    border-radius:12px;
+
+    background:#2563EB;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#1E40AF;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}

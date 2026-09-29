@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Student Verification</title>
+
+</head>
+
+<body>
+
+<h1>Student Verification</h1>
+
+<hr>
+
+{% if valid %}
+
+<h2 style="color:green;">
+✅ Student ID Verified
+</h2>
+
+<p>
+This student ID is valid.
+</p>
+
+{% else %}
+
+<h2 style="color:red;">
+❌ Student ID Invalid
+</h2>
+
+<p>
+
+{{ message }}
+
+</p>
+
+{% endif %}
+
+</body>
+
+</html>
